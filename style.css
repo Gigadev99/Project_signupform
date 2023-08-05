@@ -1,0 +1,23 @@
+.background {
+    width:15%;
+    background: rgb(31, 31, 31);
+    height: 100vh;
+    flex: 1 2 auto;
+}
+body {
+    margin: 0;
+    display: flex;
+}
+.body {
+    flex-basis: clamp(650px,100vw,900px);
+    flex-shrink: 0;
+    display: flex;
+}
+.image {
+    flex:1 1 30%;
+    background: pink;
+}
+.form {
+    flex:1 0 70%;
+    background-color: brown;
+}
