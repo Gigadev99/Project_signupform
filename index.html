@@ -9,14 +9,13 @@
 <body>
     <div class="background"></div>
     <div class="body">
-        
         <div class="image">
             <img class ="klcc" src="https://i.redd.it/w32xpfolt9661.jpg" alt="">
             <a href="https://en.wikipedia.org/wiki/Persiaran_KLCC_MRT_station"><img class = "py21" src="py21.png"></a>
         </div>
         <div class="form">
             Sign up now!
-            <form>
+            <form id="form">
                 <div>
                     <label for="FN" class="info">
                         First Name
@@ -40,12 +39,30 @@
                         Confirm Password
                         <input id="CPW" type="password">
                     </label>
-                    <button>Create account</button>
+                    <button type="button" onclick="confirmPassword()">Create account</button>
                 </div>
                 <p>Already have an account?<a href=""> Log in.</a></p>
             </form>
         </div>
     </div>
     <div class="background"></div>
+    
+    <script>
+        function confirmPassword() {
+            console.log("thefunction is running!")
+            let PW = document.getElementById("PW").value;
+            let CPW = document.getElementById("CPW").value;
+            let form = document.getElementById('form')
+        if (PW === CPW) {
+            form.submit();
+        }
+        else {
+            document.querySelectorAll('input[type="password"]').forEach(input => {
+                input.style.borderColor = "red"
+            })
+        }
+        }
+    </script>
+
 </body>
 </html>
