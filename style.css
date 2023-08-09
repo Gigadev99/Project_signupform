@@ -44,25 +44,26 @@ img.klcc {
     object-fit: cover;
     height: 100%;
 }
-img.py21 {
+img + a {
     position: relative;
     top: calc(-100% + 8px);
     right:calc(-100% - 8px);
-    width:55px;
     display: block;
+    width:55px;
 }
+img.py21 {
+    width:55px
+}
+
 form {
     background:rgb(255, 255, 255);
-    min-height:300px;
-    margin-left: -50px;
-    padding-right:10px;
+    min-height:280px;
+    margin:50px 0 0 -50px;
+    padding:30px 20px 0 50px;
     transform: translateY(-41.5px);
-    margin-top:50px;
     border-top: 1px solid yellow;
     clip-path: polygon(0 0, 100% 0, 100% 200%, 0 200%);
     box-shadow: 0 1px 17px 3.5px yellow;
-    padding-left:50px;
-    padding-top:30px;
     font-size: 1rem;
     box-sizing: border-box;
 }
@@ -75,8 +76,9 @@ form > div {
     row-gap: 20px;
 }
 input:focus {
-    border-color:green;
+    border-color:rgb(12, 99, 31);
     outline: none;
+    box-shadow: 2px 2px 5px -2px gray
 }
 input {
     display:block;
@@ -87,8 +89,40 @@ input {
     margin-top:1px;
 }
 label {
-    color:rgb(63, 63, 63);
+    color:rgb(0, 0, 0);
     font-weight: normal;
     letter-spacing: 1px;
     font-size: small;
+}
+button {
+    padding: 10px 20px;
+    margin-top: 0px;
+    margin-right: 60px;
+    font-family: Stroudly;
+    background-color: rgb(12, 99, 31);
+    border:none;
+    border-radius:3px;
+    font-weight: bold;
+    font-size:medium;
+    color:white;
+    letter-spacing: 1px;;
+}
+p {
+    font-weight: normal;
+    font-size: small;
+    margin:1em 0;
+}
+a {
+    color: rgb(12, 99, 31);
+    font-weight: bold;
+    text-decoration: none;
+}
+.PW-doesnt-match {
+    position: absolute;
+    font-size:x-small;
+    color:red;
+    margin-top:3px;
+    letter-spacing: 0.5px;
+    visibility: hidden;
+    
 }
